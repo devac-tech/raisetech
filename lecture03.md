@@ -1,21 +1,21 @@
-# AWS�t���R�[�X�̑�3��
-## AP �T�[�o�[�ɂ��Ē��ׂĂ݂܂��傤�B
-- AP �T�[�o�[�̖��O�ƃo�[�W�������m�F���Ă݂܂��傤�B
-- ��Puma version: 5.6.5
-- AP �T�[�o�[���I���������ꍇ�A���������A�N�Z�X�ł��܂����H
-- ���A�N�Z�X�ł��Ȃ������m�F���܂����B
-- ���ʂ��m�F���āA�܂� AP �T�[�o�[���N�����Ă��������B
-- ���A�N�Z�X�ł��܂��B
+# AWSフルコースの第3回
+## AP サーバーについて調べてみましょう。
+- AP サーバーの名前とバージョンを確認してみましょう。
+- →Puma version: 5.6.5
+- AP サーバーを終了させた場合、引き続きアクセスできますか？
+- →アクセスできない事を確認しました。
+- 結果を確認して、また AP サーバーを起動してください。
+- →アクセスできます。
 
-## DB �T�[�o�[�ɂ��Ē��ׂĂ݂܂��傤�B
-- �T���v���A�v���P�[�V�����Ŏg���� DB �T�[�o�[�iDB �G���W���j�̖��O�ƁA�� Cloud9 �œ��삵�Ă���o�[�W�����͂������m�F���Ă݂܂��傤�B
-- ��mysql  Ver 8.0.34
-- DB �T�[�o�[���I���������ꍇ�A���������A�N�Z�X�ł��܂����H
-���A�N�Z�X�ł��Ȃ������m�F���܂����B
-- Rails �̍\���Ǘ��c�[���̖��O�͉��ł������H�m�F���Ă݂Ă��������B
-��gem
+## DB サーバーについて調べてみましょう。
+- サンプルアプリケーションで使った DB サーバー（DB エンジン）の名前と、今 Cloud9 で動作しているバージョンはいくつか確認してみましょう。
+- →mysql  Ver 8.0.34
+- DB サーバーを終了させた場合、引き続きアクセスできますか？
+→アクセスできない事を確認しました。
+- Rails の構成管理ツールの名前は何でしたか？確認してみてください。
+→gem
 
-## ����̉ۑ肩��w�񂾂��Ƃ�񍐂��Ă��������B
-- Web �A�v���P�[�V�����ɂ��āAHTTP�̊�b�AAmazonLinux
-- Ruby�\���Ǘ��ɂ��āAGem��Bundler�ɂ���
-- linux�R�}���h���g�p�������\�z�Aerror�̑Ή�
+## 今回の課題から学んだことを報告してください。
+- Web アプリケーションについて、HTTPの基礎、AmazonLinux
+- Ruby構成管理について、GemとBundlerについて
+- linuxコマンドを使用した環境構築、errorの対応
