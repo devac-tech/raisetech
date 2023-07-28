@@ -1,13 +1,13 @@
-# �䂤�̕���
-## ���ȏЉ�
-- ����ɂ��́I�䂤�ł��I
+# ゆうの部屋
+## 自己紹介
+- こんにちは！ゆうです！
 
-## �����Ȃ���
-- ����
+## すきなもの
+- 漫画
 
-## ��2��̍u�`�Ŋw�񂾂���
-- GitHub �A�J�E���g���쐬
-- GitHub�̐ݒ�
-    - �����ݒ�A�l�A�N�Z�X�g�[�N���̍쐬�ASSH �L�[�𐶐�����A�v�����N�G�X�g�Ȃ�
-- GitHub�̑���
-    - �u�����`�؂�ւ��A���|�W�g���쐬�Apush�Aclone�Ȃ�
+## 第2回の講義で学んだこと
+- GitHub アカウントを作成
+- GitHubの設定
+    - 初期設定、個人アクセストークンの作成、SSH キーを生成する、プルリクエストなど
+- GitHubの操作
+    - ブランチ切り替え、リポジトリ作成、push、cloneなど
