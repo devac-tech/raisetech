@@ -16,7 +16,7 @@
 ## EC2 から RDS へ接続
 ![サンプルアプリ起動](img/lecture04/lec04_RDS_connect.png)
 
-## 今回の課題から学んだことを報告してください。
+## 今回の課題から学んだこと
 - VPC、サブネット構築、EC2 インスタンスの作成
 - RDS の作成、Teraterm、環境構築、errorの対応
 - RDS、EC2の接続方法
