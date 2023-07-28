@@ -1,13 +1,14 @@
 # AWSフルコースの第4回
-## EC2作成
-![サンプルアプリ起動](img/lecture04/lec04_EC2_detail.png)
 
 ## VPC作成
 ![サンプルアプリ起動](img/lecture04/lec04_VPC_detail.png)
 ![サンプルアプリ起動](img/lecture04/lec04_VPC_security.png)
 ![サンプルアプリ起動](img/lecture04/lec04_VPC_subnet.png)
 
-## EC2 と RDS を構築してください
+## EC2作成
+![サンプルアプリ起動](img/lecture04/lec04_EC2_detail.png)
+
+## RDS作成
 ![サンプルアプリ起動](img/lecture04/lec04_RDS.png)
 ![サンプルアプリ起動](img/lecture04/lec04_RDS_secgr_inboud.png)
 ![サンプルアプリ起動](img/lecture04/lec04_RDS_secgr_outboud.png)
