@@ -218,6 +218,9 @@ $ bundle exec unicorn_rails -c config/unicorn.rb -E development -D
 <img src="img/lecture05/lec05_s3_hist.png" width="640px">
 
 ## 今回の課題から学んだこと
-- rubyコマンド、サーバー構築(Nginx/Unicorn)、
+<img src="img/lecture05/diagram.png" width="640px">
+
+## 今回の課題から学んだこと
+- rubyコマンド、サーバー構築(Nginx/Unicorn)
 - 複数サービスに関わるセキュリティグループの設定、ELB作成と接続
 - S3作成と設定、RDS接続、構成図の作成方法
