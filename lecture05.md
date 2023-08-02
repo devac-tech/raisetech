@@ -217,7 +217,8 @@ $ bundle exec unicorn_rails -c config/unicorn.rb -E development -D
 <img src="img/lecture05/lec05_app_img_up.png" width="640px">
 <img src="img/lecture05/lec05_s3_hist.png" width="640px">
 
-## 今回の課題から学んだこと
+## 構成図の作成
+draw.ioで作成
 <img src="img/lecture05/diagram.png" width="640px">
 
 ## 今回の課題から学んだこと
