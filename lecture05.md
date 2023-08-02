@@ -175,6 +175,8 @@ URLは、「http://ALBのDNS名/fruits」です。
 S3用のIAMユーザーを作成する。ポリシーは、AmazonS3FullAccessを設定する。
 アクセスキーとシークレットキーをローカルに保存する。
 ```
+<img src="img/lecture05/lec05_s3.png" width="640px">
+<img src="img/lecture05/lec05_iam_.png" width="640px">
 
 2. 環境構築
 ```
@@ -212,8 +214,6 @@ $ bundle exec unicorn_rails -c config/unicorn.rb -E development -D
 ```
 
 3. 動作確認
-<img src="img/lecture05/lec05_s3.png" width="640px">
-<img src="img/lecture05/lec05_iam_.png" width="640px">
 <img src="img/lecture05/lec05_app_img_up.png" width="640px">
 <img src="img/lecture05/lec05_s3_hist.png" width="640px">
 
