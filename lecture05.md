@@ -98,7 +98,7 @@ bin/dev
 <img src="img/lecture05/lec05_start_app.png" width="640px">
 <img src="img/lecture05/lec05_start_app_cmd.png" width="640px">
 
-## Nginx + Unicornでデプロイできるようにする
+## Nginx + Unicornでデプロイする
 
 1. 環境構築
 ```
@@ -139,7 +139,7 @@ server {
   error_page 500 502 503 504 /500.html;
 }
 
-## Nginx + Unicornを起動
+# Nginx + Unicornを起動
 $ sudo systemctl start nginx
 $ bundle exec unicorn_rails -c config/unicorn.rb -E development -D
 ```
@@ -164,8 +164,7 @@ $ bundle exec unicorn_rails -c config/unicorn.rb -E development -D
 ```
 
 2. 動作確認
-# ブラウザから確認する
-http://ALBのDNS名/fruits
+URLは、「http://ALBのDNS名/fruits」です。
 
 <img src="img/lecture05/lec05_elb_dns.png" width="640px">
 
