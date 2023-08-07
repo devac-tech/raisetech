@@ -20,7 +20,7 @@
 ## サンプルアプリケーションが起動している状態で動作を確認する
 - Nginxを起動
 - ターゲットグループのヘルスステータスが「正常」になっていることを確認
-<img src="img/lecture06/CloudWatch_Alarms_Test_OK_Mail.png" width="640px">
+<img src="img/lecture06/Target_gr_helthy.png" width="640px">
 
 - CloudWatchで「OK」になっていることを確認
 <img src="img/lecture06/CloudWatch_Alarm_OK.png" width="640px">
