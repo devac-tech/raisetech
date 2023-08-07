@@ -31,7 +31,7 @@
 
 ## AWS利用料の見積を作成する
 - 今日までに作成したリソースの内容の見積
-[My Estimate](https://calculator.aws/#/estimate)
+[My Estimate](https://calculator.aws/#/estimate?id=710ee6bdf5fee83825cee73e8732393281db6ac3)
 
 ## マネジメントコンソールから、現在の利用料を確認する
 - 先月の請求情報から、EC2の料金がいくらか、無料利用枠で収まっているか確認
