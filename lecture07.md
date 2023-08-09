@@ -13,7 +13,7 @@
 
 ### 脆弱性<br>
 - HTTP通信のため暗号化されていない<br>
-→ACMで証明書を発行するしてHTTPS通信を行う。またはHTTPを閉じる。<br>
+→ACMで証明書を発行してHTTPS通信を行う。またはHTTPを閉じる。<br>
 
 - 攻撃の遮断<br>
 →全ての攻撃遮断できるわけではないが、WAFを検討してもよい。その際のルールは、AWSManagedRulesCommonRuleSetを推奨。<br>
