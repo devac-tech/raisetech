@@ -11,7 +11,9 @@
 ![ec2](img/lecture10/Screenshot-2025-05-ec2.png)
   - EC2のインバウンド
   ![EC2のインバウンド](img/lecture10/Screenshot-2025-05-ec2-inout.png)
+
 * RDS
+
 ![rds](img/lecture10/Screenshot-2025-05-rds.png)
 * ELB
 ![elb](img/lecture10/Screenshot-2025-05-lb.png)
