@@ -230,7 +230,6 @@ Resources:
       SubnetId: !Ref PublicSubnet1
       SecurityGroupIds:
         - !Ref MySecurityGroupEc2
-      IamInstanceProfile: !Ref IAMInstanceProfile
       BlockDeviceMappings:
         - DeviceName: "/dev/xvda"
           Ebs:
