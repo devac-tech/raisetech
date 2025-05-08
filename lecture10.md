@@ -1,7 +1,7 @@
 # 第１０回課題
-* ※CFn→CloudFormation
+* ※第5回の課題で作成したインフラ環境をCloudFormation（以降CFnと記載）で構築する。
 
-## CFnに使用したymlファイル
+## CFnに使用したyamlファイル
 * [template.yaml](template.yaml)
 
 ## CFnで作成したリソース
