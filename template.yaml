@@ -18,6 +18,11 @@ Parameters:
     NoEcho: true
     Description: "The database admin account password."
 
+  MyCidrIp:
+    NoEcho: true
+    Type: String
+    Description: Enter the CIDR IP for the security group ingress rule
+
 Resources:
   # VPC
   MyVPC:
@@ -177,11 +182,11 @@ Resources:
         - IpProtocol: tcp
           FromPort: 22
           ToPort: 22
-          CidrIp: 0.0.0.0/0
+          CidrIp: !Ref MyCidrIp
         - IpProtocol: tcp
           FromPort: 80
           ToPort: 80
-          CidrIp: 0.0.0.0/0
+          SourceSecurityGroupId: !Ref MySecurityGroupELB
       SecurityGroupEgress:
         - IpProtocol: -1
           CidrIp: 0.0.0.0/0
@@ -347,34 +352,25 @@ Resources:
       CACertificateIdentifier: rds-ca-rsa2048-g1
 
   # S3 バケット（画像の保存先用）
-  StaticWebsiteBucket:
+  S3Bucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: !Sub "raisetekkun-static-website"
-      WebsiteConfiguration:
-        IndexDocument: "index.html"
-        ErrorDocument: "error.html"
+      BucketName: !Sub "raisetekkun-bkt"
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+            BucketKeyEnabled: true
       PublicAccessBlockConfiguration:
-        BlockPublicAcls: false
-        BlockPublicPolicy: false
-        IgnorePublicAcls: false
-        RestrictPublicBuckets: false
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      VersioningConfiguration:
+        Status: Suspended
       Tags:
         - Key: Name
-          Value: !Sub "raisetekkun-static-website"
-
-  # バケットポリシー（公開アクセスを許可）
-  BucketPolicy:
-    Type: AWS::S3::BucketPolicy
-    Properties:
-      Bucket: !Ref StaticWebsiteBucket
-      PolicyDocument:
-        Version: "2012-10-17"
-        Statement:
-          - Effect: Allow
-            Principal: "*"
-            Action: "s3:GetObject"
-            Resource: !Sub "arn:aws:s3:::raisetekkun-static-website/*"
+          Value: raisetech-bkt
 
   # IAM
   IAMRole:
@@ -391,8 +387,21 @@ Resources:
             Action: sts:AssumeRole
       ManagedPolicyArns:
         - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
-      Description: Allow EC2 to use SSM
+      Policies:
+        - PolicyName: S3BucketAccessPolicy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:PutObject
+                  - s3:GetObject
+                  - s3:DeleteObject
+                Resource:
+                  - !Sub "arn:aws:s3:::raisetekkun-bkt/*"
+      Description: Allow EC2 to use SSM and access S3
 
+  # IAM インスタンスプロファイルの作成
   IAMInstanceProfile:
     Type: AWS::IAM::InstanceProfile
     Properties:
