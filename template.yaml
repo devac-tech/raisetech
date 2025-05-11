@@ -40,7 +40,7 @@ Resources:
   PublicSubnet1:
     Type: AWS::EC2::Subnet
     Properties:
-      AvailabilityZone: ap-northeast-1a
+      AvailabilityZone: !Select [0, !GetAZs ""]
       CidrBlock: 10.0.0.0/20
       VpcId: !Ref MyVPC
       MapPublicIpOnLaunch: true
@@ -50,7 +50,7 @@ Resources:
   PublicSubnet2:
     Type: AWS::EC2::Subnet
     Properties:
-      AvailabilityZone: ap-northeast-1c
+      AvailabilityZone: !Select [1, !GetAZs ""]
       CidrBlock: 10.0.16.0/20
       VpcId: !Ref MyVPC
       MapPublicIpOnLaunch: true
@@ -62,7 +62,7 @@ Resources:
   PrivateSubnet1:
     Type: AWS::EC2::Subnet
     Properties:
-      AvailabilityZone: ap-northeast-1a
+      AvailabilityZone: !Select [0, !GetAZs ""]
       CidrBlock: 10.0.128.0/20
       VpcId: !Ref MyVPC
       MapPublicIpOnLaunch: false
@@ -72,7 +72,7 @@ Resources:
   PrivateSubnet2:
     Type: AWS::EC2::Subnet
     Properties:
-      AvailabilityZone: ap-northeast-1c
+      AvailabilityZone: !Select [1, !GetAZs ""]
       CidrBlock: 10.0.144.0/20
       VpcId: !Ref MyVPC
       MapPublicIpOnLaunch: false
@@ -327,7 +327,7 @@ Resources:
       MasterUserPassword: !Ref DBPassword
       PreferredBackupWindow: 13:55-14:25
       BackupRetentionPeriod: 1
-      AvailabilityZone: ap-northeast-1a
+      AvailabilityZone: !Select [0, !GetAZs ""]
       PreferredMaintenanceWindow: sun:17:17-sun:17:47
       MultiAZ: false
       EngineVersion: 8.0.40
