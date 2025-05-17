@@ -6,12 +6,13 @@ jobs:
     executor: python/default
     steps:
       - checkout
-      - run: pip install cfn-lint
+      - run:
+          name: Install cfn-lint
+          command: pip install cfn-lint
       - run:
           name: run cfn-lint
           command: |
             cfn-lint -i W3002 -t cloudformation/*.yml
-
 workflows:
   raisetech:
     jobs:
